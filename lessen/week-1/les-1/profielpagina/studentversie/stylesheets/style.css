@@ -23,7 +23,7 @@
     border: 4px solid black;
     border-radius: 50%;
     margin: 15px 0px 15px 0px;
-    width: 20%;
+    width: 30%;
     animation: glow 3s ease alternate;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .profile-content__category-title {
-    color: rgba(39, 140, 39, 0.96);
+    color: rgba(14, 34, 188, 0.96);
 }
 
 .profile-content__category--hidden-mobile {
@@ -63,7 +63,7 @@
 }
 
 .profile-content__institute {
-    color: rgba(39, 140, 39, 0.96);
+    color: rgba(0, 44, 164, 0.96);
     margin-top: 0px;
     font-size: 14px;
 }
@@ -108,3 +108,33 @@
 
 /*student uitwerking*/
 
+.link{
+    text-decoration: none;
+    color:black;
+}
+.personalia_base{
+    align-items: baseline !important;
+    width: 50%;
+}
+.personalia_base_title{
+    align-self: center;
+}
+.personalia_email:before{
+     content: "\f0e0";
+}
+.personalia_name:before{
+         content: "\f007";
+    }
+    .personalia_tel:before{
+         content: "\f095";
+    }
+    .before:before{
+        padding-right:15px;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    }
+    .personalia_home:before{
+        
+        content: "\f015";
+
+    }
