@@ -7,8 +7,8 @@
 }
 
 .personalia {
-    background-color: #e7e8ec;
-    width: 100%;
+    background-color: #D7D7D7;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +37,6 @@
 }
 
 .profile-content__category--hidden-mobile {
-    display: none;
 }
 
 .profile-content__element {
@@ -48,7 +47,6 @@
 .profile-content__element--hidden-mobile {
     display: flex;
     flex-direction: column;
-    display: none;
 }
 
 .profile-content__title {
@@ -59,7 +57,6 @@
 }
 
 .profile-content__period {
-    display: none;
 }
 
 .profile-content__institute {
@@ -114,7 +111,8 @@
 }
 .personalia_base{
     align-items: baseline !important;
-    width: 50%;
+    width: 100%;
+    padding-left: 30px;
 }
 .personalia_base_title{
     align-self: center;
@@ -132,9 +130,194 @@
         padding-right:15px;
     font-family: "Font Awesome 5 Free"; 
     font-weight: 900;
+    color:#0A369D !important;
+    display: inline-block;
+    text-align: center !important;
+    width: 25px;
     }
     .personalia_home:before{
         
         content: "\f015";
 
     }
+    .personalia_rijbewijs:before{
+        content: "\f015";
+
+    }
+    .eigenschappen_ul li span{
+        color:#000000;
+    }
+    .eigenschappen_ul{
+        list-style: circle;
+        color: #0a369d;
+    }
+    .personalia_geboorte_datum:before{
+        content: "\f073";
+    }
+    .personalia_base div {
+width: 100%;
+    }
+    .personalia_geslacht:before{
+        content: "\f183";
+    }
+    .personalia_nationaliteit:before{
+        content: "\f0ac";
+    }
+    .header{
+background-image: url("../images/header_picture.jpeg");
+height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
+    box-shadow: inset 0px 0px 10px rgb(109 103 103 / 90%);
+    }
+    .filter{
+height:100%;
+background-color:#00000087;
+    }
+    body{
+        margin:0px;
+    }
+    .header_content{
+        height: 100px;
+        text-align: center;
+        padding-top: 12%;
+        color: #ffffff;
+    font-family: system-ui;
+    }
+    .header_content a{
+         
+            content: "\f063";
+            color: #ffffff;
+            border: 3px solid #ffffff;
+            border-radius: 25px;
+            padding: 15px 10px;
+            transition: transform 1s ease-in-out;
+            position: absolute;
+
+    }
+    .header_content   h1{
+    font-size: 89px;
+    letter-spacing: 7px;
+    text-transform:uppercase;
+    opacity: 0.7;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    }
+    html {
+        scroll-behavior: smooth;
+      }
+      h3{
+        color:#0A369D !important;
+
+      }
+      .picture{
+        background-image: url("../images/foto_joery_2.jpeg");
+        background-size: cover;
+        height:27vw;
+        width: 100%;
+        align-content: flex-end;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .picture h1{
+        background-color: #D7D7D7;
+        margin-bottom: 0px;
+        padding: 15px 15px 15px 15px;
+        border-radius: 0px 25px 0px 0px;
+        color: #0a369d;
+        font-size: 30px;
+      }
+      .profile-content_omschrijving{
+        font-size: 14px;
+        color:black;
+        margin-top:3px;
+      }
+      .bar{
+        
+      }
+      .bar {
+        width: 200px; /* Pas de breedte aan naar wens */
+        height: 20px; /* Pas de hoogte aan naar wens */
+        border: 1px solid #ccc; /* Randstijl en kleur aanpassen */
+        border-radius: 5px; /* Afgeronde hoeken */
+        overflow: hidden;
+      }
+      
+      .bar::-webkit-progress-bar {
+        background-color: #f2f2f2; /* Achtergrondkleur van de balk zelf */
+      }
+      
+      .bar::-webkit-progress-value {
+        background-color: #0A369D ; /* Vulkleur van de balk */
+      }
+      
+      .bar::-moz-progress-bar {
+        background-color: #0A369D ; /* Vulkleur van de balk voor Firefox */
+      }
+      .section{
+        margin-bottom:25px;
+        padding:15px;
+        background-color:#D7D7D7;
+        border-radius:15px;
+        margin:30px;
+        margin-top:0px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .profile {
+       
+
+    }
+    .profile-content{
+        padding:0px;
+        padding-top:15px;
+
+    }
+    section.profile-content .filer
+        {
+        margin:15px;
+    }
+    .profile {
+        background-color: #fff3f3;}
+.menu{
+    float: right;
+    padding:15px;
+}
+.menu a{
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.6;
+    font-size: 20px;
+    padding: 15px;
+    font-family: system-ui;
+}
+        @media only screen and (max-width: 800px) {
+
+        .header{
+            background-image: url("../images/mobile_header_foto.jpeg");
+            background-size: cover;
+        }
+        .header_content h1{
+            font-size:49px;
+        }
+        .header_content {
+           
+            padding-top: 50%;
+    }
+    .personalia {
+        width: 100%;}
+        .picture {
+            background-size: cover;
+            height: 83vw;
+}
+.personalia_base div {
+    width: 90%;
+    padding-left: 18px;
+}
+.section {
+    margin: 15px !important;
+}
+.personalia_base {
+
+    padding-left: 0px;
+}

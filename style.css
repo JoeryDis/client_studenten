@@ -1,0 +1,51 @@
+.title{
+    color:#ffffff;
+}
+body{
+    margin:0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.container{
+    margin:15px;
+}
+.header{
+    padding:15px;
+    background-color:#004fff91;
+    text-align: center;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    .week{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;     
+          border-radius:15px;
+          padding:15px;
+    }
+ a.les_btn{
+    background-color: #1515a6;
+    color: #ffffff;
+    padding: 5px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align-last: center;
+    transition:0.3s;
+ }
+ .les_base {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 0px;
+    }
+    a.les_btn:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition:0.3s;
+        background-color:#3d3de9;
+    }
+   
+  
