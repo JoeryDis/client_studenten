@@ -7,15 +7,43 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
     <script src="https://kit.fontawesome.com/91451e1677.js" crossorigin="anonymous"></script>
-      <link rel="icon" type="image/x-icon" href="images/JD.png">
-
+    <script defer src="js/gdpr.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/JD.png">
 </head>
 
 <body>
+    <!-- <div class="form"><iframe src="http://localhost/Client_technology/Fork/client_studenten/lessen/week-1/les-1/profielpagina/studentversie/form.html"></iframe></div> -->
+
+        <!-- <h1 id="content-gpdr-consent-status"></h1> -->
+        <div class="content-gdpr-not-chosen hide">
+            <!-- <p>Deze content wordt alleen getoond als gdrp consent niet is gekozen.</p> -->
+        </div>
+
+        <div class="content-gdpr-accept hide">
+            <!-- <p>Deze content wordt alleen getoond als gdrp is geaccepteerd.</p> -->
+        </div>
+
+        <div class="content-gdpr-reject hide">
+            <!-- <p>Deze content wordt alleen getoond als gdrp is verworpen.</p> -->
+        </div>
+    <section class="gdpr-consent hide">
+
+        <div class="gdpr-consent__description">
+            <p>Deze website gebruikt cookies.
+            We gebruiken cookies om content te personaliseren, voor social media en het analyseren
+                van verkeer op de website, advertenties.</p>
+        </div>
+
+        <div class="gdpr-consent__choice">
+            <button class="gdpr-consent__button--accept">Ja, natuurlijk</button>
+            <button class="gdpr-consent__button--reject">Neu, misschien later</button>
+        </div>
+
+</section>
 <div class="header"><div class="filter"><div class="menu"> 
     <nav>
         <a href="#cv">CV</a>
-        <a href="#">Contact</a> 
+        <a onclick="openPopup()">Contact</a> 
     </nav>
     
     </div><div class="header_content"><h1>Joery Disselhof</h1><br><a id="arrow_down" href="#cv"><i class="fa fa-solid fa-arrow-down"></i></a></div></div></div>
@@ -86,9 +114,11 @@
     <section class="profile">
 
         <section class="profile-content">
-<div class="section">
+<div>
+    <div class="parent2">
+        <div  class="inner_div_parent2">
             <div class="profile-content__category--hidden-mobile">
-                <h3 class="profile-content__category-title">Profiel</h3>
+                <h3 class="profile-content__category-title">Over mij</h3>
                
             </div>
             <div class="profile-content__element--hidden-mobile">
@@ -97,12 +127,13 @@
                 <p class="profile-content__description">
                     Mijn naam is Joery, een gedreven professional van 20 jaar met een sterke achtergrond in de IT-sector. Met 3 jaar ervaring als front-end programmeur heb ik bewezen vaardigheden in het ontwikkelen van boeiende en responsieve gebruikersinterfaces. Ik heb mijn expertise verder verfijnd door een succesvolle 3-jarige MBO-opleiding Software Developer af te ronden. Mijn toewijding aan kwaliteit en mijn vermogen om innovatieve oplossingen te creëren, hebben bijgedragen aan het succes van projecten in mijn vorige functies. Nu ben ik klaar om mijn technische vaardigheden en passie voor IT in te zetten om bij te dragen aan nieuwe uitdagingen en projecten.
                 <p>
-            </div>
-        </div>
+            </div><hr></div>
+        </div></div>
+        
 <!-- Opleidingen --><div class="section">
 
             <div class="profile-content__category">
-                <h3 class="profile-content__category-title">Opleidingen</h3>
+                <h3 class="profile-content__category-title">Opleidingen <i class="fa-solid fa-graduation-cap"></i></h3>
                 
             </div>
 
@@ -127,11 +158,11 @@
                     <p class="profile-content__period">aug 2022 - heden</p>
                 </div>
                 <p class="profile-content__institute">Windesheim college Zwolle</p>
-            </div></div>
+            </div><hr></div>
 <!-- Werkervaring --><div class="section">
 
             <div class="profile-content__category">
-                <h3 class="profile-content__category-title">Werkervaring</h3>
+                <h3 class="profile-content__category-title">Werkervaring <i class="fa-solid fa-briefcase"></i></h3>
               
             </div>
             <div class="profile-content__element">
@@ -158,12 +189,12 @@
                     </div>
                     <p class="profile-content__institute">MonkeyTown Zwolle</p>
                     <p class="profile-content_omschrijving">Bij Monkey Town vervulde ik een diverse rol, waarbij ik verantwoordelijk was voor de kassa, schoonmaakwerkzaamheden en het werken met kinderen. Daarnaast nam ik de afwas in de spoelkeuken voor mijn rekening. Hierdoor ontwikkelde ik een veelzijdige set vaardigheden in de horecasector, waaronder klantenservice, hygiëne en teamwork.
-                    </p>            </div></div>     
+                    </p>            </div><hr></div>     
         </section>
 <!-- Stages --><div class="section">
 
     <div class="profile-content__category">
-        <h3 class="profile-content__category-title">Stages</h3>
+        <h3 class="profile-content__category-title">Stages <img style="width: 33px;" src="images/internship-icon.svg"></h3>
         
     </div>
 
@@ -176,9 +207,19 @@
         <p class="profile-content_omschrijving">Tijdens mijn stage als front-end programmeur bij De Websmid heb ik diverse opdrachten aan websites uitgevoerd. Mijn taken omvatten niet alleen het technische aspect, maar ook het onderhouden van veelvuldig klantcontact. Deze stage bood mij waardevolle ervaring in zowel het technische als het communicatieve aspect van front-end ontwikkeling.
         </p>
     </div></div>
-    </section>
-</div>
+   
 
+        <a class="lower_btn" onclick="openPopup()">Neem contact met mij op</a> 
+ 
+    </div>
+    </section>
+    
+</div>
+<div class="overlay" id="overlay" onclick="closePopup()"></div>
+<div class="popup" id="popup">
+    <span class="close-btn" onclick="closePopup()">X</span>
+    <iframe src="form.html" frameborder="0"></iframe>
+</div>
 </body>
 
 </html>
@@ -196,4 +237,16 @@
         // Start de beweging
         setInterval(beweegarrow, 1000); // Verander 1000 naar de gewenste interval in milliseconden
     });
+</script>
+<script>
+    // JavaScript-functies om de popup te openen en te sluiten
+    function openPopup() {
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("overlay").style.display = "none";
+        document.getElementById("popup").style.display = "none";
+    }
 </script>

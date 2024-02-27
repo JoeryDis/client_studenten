@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form versturen</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script defer src="scripts/app.js"></script>
+    <script defer src="js/contact.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+        var onloadCallback = function() {
+          grecaptcha.render('html_element', {
+            'sitekey' : '6LczCIApAAAAAN8N9OQzAdINH-2PerwUzfOCAeYC'
+          });
+        };
+      </script>
+</head>
+<body style="
+padding: 15px !important;
+">
+    <div id="filer_tje" class="filertje" style="
+    margin: -15px;
+">
+    <div id="loader"></div></div>
+
+<form id="contactForm" method="post" class="form-email">
+    <h2 class="form_title">Neem contact met mij op</h2>
+
+<div class="parent_form_field">
+    <label class="name_lable" for="name">
+        <!-- <span>Naam:</span> -->
+        <input type="text" name="name" id="name" required  placeholder="Naam">
+        <span class="error" aria-live="polite"></span>
+    </label>
+    <label class="onderwerp_lable" for="onderwerp">
+        <!-- <span>Onderwerp:</span> -->
+        <input type="text" name="onderwerp" id="onderwerp" required maxlength="200" placeholder="Onderwerp">
+        <span class="error" aria-live="polite"></span>
+    </label>
+</div><div class="parent_form_field_1">
+
+<label for="email">
+    <!-- <span>Emailadres:</span> -->
+    <input type="email" name="email" id="email" required minlength="8" placeholder="Emailadres">
+    <span class="error" aria-live="polite"></span>
+</label></div>
+<div class="parent_form_field_1">
+
+    <label for="tel">
+        <input type="tel" name="tel" id="tel" required minlength="8" placeholder="telefoonnummer">
+        <span class="tel_error" aria-live="polite"></span>
+    </label></div>
+<div class="parent_form_field_1">
+
+    <label for="bericht">
+        <!-- <span>Emailadres:</span> -->
+        <textarea name="bericht" id="bericht" required placeholder="Bericht" maxlength="600"></textarea>
+        <span class="error" aria-live="polite"></span>
+    </label></div>
+    <div class="parent_form_field_1">
+        <label for="recaptcha">
+    <div class="g-recaptcha" data-sitekey="6LczCIApAAAAAN8N9OQzAdINH-2PerwUzfOCAeYC"></div>        <span class="captcha_error" aria-live="polite"></span>
+</label></div>
+        <div id="notification"></div>
+
+    <input onclick="submitForm(event)" class="btn" type="submit" value="verzenden">
+
+</form>
+
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+async defer>
+</script>
+</body>
+</html>

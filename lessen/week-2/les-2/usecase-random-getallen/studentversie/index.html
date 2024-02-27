@@ -17,11 +17,14 @@
         }
 
         //student uitwerking
-
+            let responses = await Promise.all(requestPromises);
         let sum = 0;
         for(const response of responses) {
 
             //student uitwerking
+           let result = await response.json();
+        //    debugger;
+            sum += result.random;
         }
 
         console.log(sum);

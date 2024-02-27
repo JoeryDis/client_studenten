@@ -15,7 +15,7 @@
 }
 
 .profile {
-    background-color: #ffffff !important;    width: 100%;
+    background-color: #787878 !important;    width: 100%;
 }
 
 .person-logo {
@@ -129,10 +129,7 @@
     padding-left: 15px !important; */
 
     }
-   i{
-    font-family: "Font Awesome 5 Free"; 
-    font-style: normal;
-   }
+   
     .before:before{
         padding-right:15px;
     font-family: "Font Awesome 5 Free"; 
@@ -354,18 +351,18 @@ background-color:#00000087;
 }
 .parent2 {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.2fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     padding:30px;
     }
     .inner_div_parent2{
-        color: black;
+        background-color:#ffffff;
         padding:  15px; 
         position: relative;
     }
-    /* .inner_div_parent2::before {
+    .inner_div_parent2::before {
         content: "";
         width: 0;
         border-left: 45px solid transparent;
@@ -374,356 +371,11 @@ background-color:#00000087;
         top: 0;
         transform: rotate(270deg);
         right: 0;
-    } */
-    /* .form{
+    }
+    .form{
+        height:80vh;
+        background-color: gray;
         position: fixed;
-        background-color:rgba(0, 0, 0, 0.608);
-        height: 100vh;
-        margin: auto;
-        width: 100%;
         z-index: 999;
-        text-align: center;
-        
-    } */
-    /* iframe{
-        background: #ffffff !important;
-        padding: 15px;
-        z-index: 999;
-        margin-top:15%;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        border: none;
-        width: 47%;
-        height:28%;
+        margin-top: 126px;
     }
-   .form-email{
-   }
-   .form-email input#email, .form-email input#name, .form-email #achternaam{
-    padding: 7px 10px;
-    border: 1px solid gray;
-   } */
-   .btn{
-    margin-top: 25px;
-    background-color: #34349c;
-    color: #ffffff;
-    padding: 5px 15px;
-    border: none;
-    font-size: 17px;
-    font-weight: bold;
-   }
-   /* .parent_form_field {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    margin-bottom: 15px;
-    }
-    .parent_form_field_1{
-        
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
-                
-        }
-        .parent_form_field_1 input{
-            width: 88%;
-        }
-    .form_title{
-        font-family: system-ui;
-    font-weight: bold;
-    } */
-    .g-recaptcha iframe{
-        background: #ffffff !important; 
-     padding: 0px !important; 
-     z-index: 999 !important; 
-     margin-top: 0% !important; 
-     box-shadow: none !important;
-     border: none !important; 
-     width: 100% !important; 
-     height: 100% !important;
-    }
-    #thank-you-message {
-        display: none;
-      }
-      
-      #thank-you-message.show {
-        display: block;
-      }
-      .bad{
-        background-color: #ff000052;
-    color: #d40f0f;
-    padding: 15px;
-    text-align-last: center;
-    border: 2px solid #d40f0f;
-    z-index: 999;
-    position: relative;
-    border-radius: 5px;
-    -moz-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Opera */
-    animation: cssAnimation 0s ease-in 5s forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-      }
-      .good{
-        background-color: #38c80d52;
-    color: #109f1b;
-    padding: 15px;
-    text-align-last: center;
-    border: 2px soli#109f1b;
-    z-index: 999;
-    position: relative;
-    border-radius: 5px;
-    -moz-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Opera */
-    animation: cssAnimation 0s ease-in 5s forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-      }
-
-      @keyframes cssAnimation {
-        to {
-            width:0;
-            height:0;
-            overflow:hidden;
-            display: none;
-
-        }
-    }
-    @-webkit-keyframes cssAnimation {
-        to {
-            width:0;
-            height:0;
-            visibility:hidden;
-            display: none;
-        }
-    }
-
-
-
-
-
-
-
-      /* Center the loader */
-#loader {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 120px;
-    height: 120px;
-    margin: -76px 0 0 -76px;
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-  }
-  
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  /* Add animation to "page content" */
-  .animate-bottom {
-    position: relative;
-    -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 1s;
-    animation-name: animatebottom;
-    animation-duration: 1s
-  }
-  
-  @-webkit-keyframes animatebottom {
-    from { bottom:-100px; opacity:0 } 
-    to { bottom:0px; opacity:1 }
-  }
-  
-  @keyframes animatebottom { 
-    from{ bottom:-100px; opacity:0 } 
-    to{ bottom:0; opacity:1 }
-  }
-  
-  #myDiv {
-    display: none;
-    text-align: center;
-  }
-  .filertje {
-    background-color: #000000;
-    height: 100vh;
-    opacity: 0.5;
-    position: absolute;
-    z-index: 999;
-    width: 100%;
-    display:none;
-}
-.laat_zien{
-    display:flex !important;
-}
-div.weg{
-    display: none !important;
-}
-
-
-
-
-
-
-      /* Stijl voor de achtergrond-overlay */
-      .overlay {
-         display: none; 
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-    }
-
-    /* Stijl voor het popup-venster */
-    .popup {
-         display: none; 
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        /* padding: 20px; */
-        background: #fff;
-        z-index: 2;
-        width: 50%;
-        height:70%;
-    }
-.popup iframe{
-    margin-top: 0%;
-    padding: 0px !important;
-    box-shadow: none;
-}
-h2.form_title {
-    font-family: system-ui;
-    margin-top: 0px;
-}
-span.close-btn {
-    font-family: system-ui;
-}
-    /* Stijl voor het sluiten van het popup-venster */
-    .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-    }
-
-    /* Stijl voor het iframe binnen de popup */
-    .popup iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .form-email {
-     
-    }
-    
-    .form_title {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-    
-    .parent_form_field {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .parent_form_field_1 {
-        margin-top: 10px;
-    }
-    
-    label {
-        display: block;
-        margin-bottom: 10px;
-    }
-    
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],input[type="number"],
-    
-    textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .btn {
-        background-color: #4caf50;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    label.name_lable, label.onderwerp_lable{
-        width: 48%;
-    }
-    textarea{
-        max-width: 100%;
-        max-height: 89px;
-    }
-    a{
-        cursor: pointer;
-    }
-
-    .lower_btn{
-        margin-top:7%;
-        margin-left: 40%;  
-              background-color: #0a369d;
-        color: #ffffff;
-        padding: 15px;
-        border-radius: 5px;
-    }
-
-    @media only screen and (max-width: 800px) {
-
-    .popup{
-        width: 85% !important;
-    height: 76% !important;
-    }
-
-
-.lower_btn{
-    margin-left: 23%;
-    margin-top: 15%;
-    display: inline-block;
-    margin-bottom: 15%;
-}}
