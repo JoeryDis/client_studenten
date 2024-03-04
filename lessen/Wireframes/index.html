@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afbeeldingen Laden</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hier komt de tabel waarin de afbeeldingen zullen worden weergegeven -->
+<table>
+    <thead>
+        <tr>
+            <th>Afbeelding</th>
+            <th>Bestandsnaam</th>
+        </tr>
+    </thead>
+    <tbody id="imageContainer"></tbody>
+</table>
+
+<script>
+// JavaScript om de afbeeldingen in te laden
+
+// Het pad naar de map met afbeeldingen
+const imagePath = 'img/';
+
+// Referentie naar de container waarin de afbeeldingen worden weergegeven
+const imageContainer = document.getElementById('imageContainer');
+
+// Een AJAX-request maken om de lijst met bestanden in de map op te halen
+const xhr = new XMLHttpRequest();
+xhr.open('GET', imagePath, true);
+
+xhr.onload = function() {
+    if (xhr.status == 200) {
+        // De lijst met bestanden ophalen en splitsen
+        const files = xhr.responseText.split('\n');
+
+        // Loop door de lijst met bestanden en voeg ze toe aan de pagina
+        files.forEach(function(file) {
+            if (file.trim() !== '') {
+                // Alleen de bestandsnaam uit de HTML-code halen
+                const fileName = file.match(/<a href="([^"]+)">/);
+                if (fileName) {
+                    const img = document.createElement('img');
+                    img.src = imagePath + fileName[1];
+
+                    const row = document.createElement('tr');
+                    const cell1 = document.createElement('td');
+                    const cell2 = document.createElement('td');
+
+                    cell1.appendChild(img);
+                    cell2.textContent = fileName[1];
+
+                    row.appendChild(cell1);
+                    row.appendChild(cell2);
+
+                    imageContainer.appendChild(row);
+                }
+            }
+        });
+    }
+};
+
+xhr.send();
+</script>
+
+</body>
+</html>
