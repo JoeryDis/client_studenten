@@ -1,26 +1,80 @@
-<div class="parent">
-    <div class="foto"><img src="./images/foto_joery_2.jpeg"></div>
-    <div clas="info"><h2>Over mij</h2>      <br>
-        Student HBO ICT & Front-end progameur<br>
-        <hr>
-           
-    </div>
+<script>
+    class CustomMelding extends HTMLElement{
+    
+        connectedCallback(){
+            this.innerHTML = '<div class="melding" id="melding">Melding:<br><p class="tekst" id="tekst"></p></div>';
+        }
+    }
+    customElements.define('melding-t', CustomMelding);
+     
+    function changeClass() {
+  var element = document.getElementById("melding");
+  ['warning', 'error', 'info'].forEach(className => element.classList.replace(className, 'succes'));
+  element.classList.add('succes');
+
+  document.getElementById("tekst").innerHTML = "Formulier is verzonden";
+
+}
+function changeClass2() {
+  var element = document.getElementById("melding");
+  ['succes', 'error', 'info'].forEach(className => element.classList.replace(className, 'warning'));
+element.classList.add('warning');
+  document.getElementById("tekst").innerHTML = "Waarschuwing";
+
+}
+function changeClass3() {
+  var element = document.getElementById("melding");
+  ['warning', 'succes', 'info'].forEach(className => element.classList.replace(className, 'error'));
+  element.classList.add('error');
+
+  document.getElementById("tekst").innerHTML = "Error!";
+
+}
+function changeClass4() {
+  var element = document.getElementById("melding");
+  ['warning', 'succes', 'error'].forEach(className => element.classList.replace(className, 'info'));
+  element.classList.add('info');
+
+  document.getElementById("tekst").innerHTML = "Informatie";
+
+}
+
+    </script>
 
 
+<melding-t></melding-t>
+<button onclick="changeClass()">Change class</button>
+<button onclick="changeClass2()">Change class</button>
 
-
-</div>
+<button onclick="changeClass3()">Change class</button>
+<button onclick="changeClass4()">Change class</button>
 
 <style>
-.parent {
-display: grid;
-grid-template-columns: 0.5fr 1fr;
-grid-template-rows: 1fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-}
-.foto img{
-    width: 218px;
-}
-    
+    .melding{
+    padding: 25px;
+    width: 450px;
+    font-family: system-ui;
+    color: #ffffff;
+    border-radius: 15px;
+    font-weight: bold;
+    }
+    .tekst{
+    font-weight: normal;
+    }
+    .warning{
+    background-color: #e39e54;
+    border: 4px solid #de7833;
+    }
+    .succes{
+    background-color: #4cb94c;
+    border: 4px solid #218121;
+    }
+    .error{
+    background-color: #b94c4c;
+    border: 4px solid #812121;
+    }
+    .info{
+    background-color: #7375ce;
+    border: 4px solid #4c4eb9;
+    }
 </style>
